@@ -10,7 +10,8 @@
         },
         "qtransf": {
             "QuantileTransformer": {
-                "output_distribution":"normal"
+                "output_distribution":"normal",
+                "n_quantiles": 100
             }
         },
         "poly_feature": {
