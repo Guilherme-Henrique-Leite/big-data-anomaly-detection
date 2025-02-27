@@ -1,11 +1,11 @@
 """
-Data loading functionality for the application.
-
-This module handles loading and basic preprocessing of data from various sources,
-optimized for big data scenarios using PySpark.
+Module to load data
 """
 
-from typing import Optional, List
+from typing import (
+    List,
+    Optional,
+)
 
 import pandas as pd
 
@@ -20,10 +20,10 @@ def load_parquet_data(
     use_spark: bool = True
 ) -> pd.DataFrame:
     """
-    Load data from a parquet file.
+    Load data from a parquet file
     
     :param file_path: path to parquet file
-    :param columns(Optional): columns to load
+    :param columns: columns to load
     :param use_spark: use spark for loading files
     :return: dataframe with loaded data
     """
