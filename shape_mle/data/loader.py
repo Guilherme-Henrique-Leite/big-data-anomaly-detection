@@ -6,29 +6,12 @@ optimized for big data scenarios using PySpark.
 """
 
 from typing import Optional, List
+
 import pandas as pd
-from pyspark.sql import SparkSession
 
 from shape_mle.config import DATA_FILE_PATH
 from shape_mle.infrastructure.logging import logger
-
-
-def get_spark_session(app_name: str = "ShapeMLE") -> SparkSession:
-    """
-    Create or get an existing Spark session.
-    
-    :param app_name: Name of the Spark application
-    :return: SparkSession object
-    """
-    spark = (SparkSession.builder
-            .appName(app_name)
-            .config("spark.sql.execution.arrow.pyspark.enabled", "true")
-            .config("spark.driver.memory", "4g")
-            .getOrCreate())
-    
-    spark.sparkContext.setLogLevel("ERROR")
-    logger.info("Spark session created successfully")
-    return spark
+from shape_mle.utils.get_session_spark import get_spark_session
 
 
 def load_parquet_data(
