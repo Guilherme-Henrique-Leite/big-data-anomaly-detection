@@ -15,11 +15,10 @@ def get_spark_session(app_name: str = "ShapeMLE") -> SparkSession:
     """
     spark = (SparkSession.builder
             .appName(app_name)
+            .config("spark.log.level", "ERROR")
             .config("spark.sql.execution.arrow.pyspark.enabled", "true")
             .config("spark.driver.memory", "4g")
             .getOrCreate())
-    
-    spark.sparkContext.setLogLevel("ERROR")
+
     logger.info("Spark session created successfully")
-    
     return spark 
