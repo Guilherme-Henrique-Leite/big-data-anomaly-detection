@@ -26,7 +26,7 @@ def save_results(predictions, output_file=None):
     
     results_df = pd.DataFrame({
         'prediction': predictions,
-        'label': ['normal' if p == 1 else 'anomaly' for p in predictions]
+        'label': ['normal' if prediction == 1 else 'anomaly' for prediction in predictions]
     })
     
     anomalies = sum(predictions == -1)
