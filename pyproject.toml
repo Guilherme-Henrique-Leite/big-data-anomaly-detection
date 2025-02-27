@@ -12,6 +12,9 @@ pandas = "^2.2.3"
 numpy = "^2.2.3"
 ruff = "^0.9.7"
 pydantic = "^2.10.6"
+pyspark = "^3.5.4"
+setuptools = "^75.8.2"
+pyarrow = "^19.0.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.9.1"
