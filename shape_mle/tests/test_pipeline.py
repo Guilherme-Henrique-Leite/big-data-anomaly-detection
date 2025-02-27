@@ -3,7 +3,7 @@ Module for testing pipeline loading
 """
 
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 from shape_mle.ml.pipeline import load_pipeline
 
