@@ -16,9 +16,6 @@ class TestPipeline(unittest.TestCase):
     def test_load_pipeline(self, mock_json_loads, mock_open, mock_exists):
         """Test loading a pipeline from configuration file"""
         mock_exists.return_value = True
-        mock_open.return_value.__enter__.return_value.readlines.return_value = [
-            '// comment', '// comment', '// comment', '{}'
-        ]
         mock_json_loads.return_value = {
             "steps": {
                 "stdscaler": {
