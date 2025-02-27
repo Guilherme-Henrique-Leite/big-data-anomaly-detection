@@ -17,6 +17,7 @@ from shape_mle.ml.predictor import predict
 from shape_mle.ml.pipeline import load_pipeline
 
 from shape_mle.data.loader import load_parquet_data
+from shape_mle.utils.results import save_results
 
 from shape_mle.infrastructure.logging import logger, setup_logger
 
@@ -55,6 +56,7 @@ def main():
     - Loads the trained model
     - Makes predictions on the data
     - Reports the results
+    - Saves the results to a file
     
     :return: predictions as numpy array
     """
@@ -84,6 +86,8 @@ def main():
         logger.info(f"Results: {len(predictions)} total predictions")
         logger.info(f"- Normal samples: {normal} ({normal/len(predictions)*100:.2f}%)")
         logger.info(f"- Anomalies detected: {anomalies} ({anomalies/len(predictions)*100:.2f}%)")
+        
+        save_results(predictions)
         
         return predictions
         
