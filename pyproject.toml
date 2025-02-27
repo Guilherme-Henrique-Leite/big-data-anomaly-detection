@@ -11,6 +11,7 @@ scikit-learn = "1.6.1"
 pandas = "^2.2.3"
 numpy = "^2.2.3"
 ruff = "^0.9.7"
+pydantic = "^2.10.6"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.9.1"
