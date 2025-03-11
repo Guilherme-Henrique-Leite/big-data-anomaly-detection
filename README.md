@@ -77,11 +77,18 @@ I added unit tests for the data loader, model, pipeline, and predictor.
 
 ```
 # Open the devcontainer
+using VS Code Remote - Containers
+select "Reopen in container"
+
+# Activate the poetry environment
 poetry env activate
 source .venv/bin/activate
 poetry install
-poetry run ruff check .
 
+# Run ruff check
+ruff check .
+
+# Run the code
 python -m shape_mle.main
 ```
 

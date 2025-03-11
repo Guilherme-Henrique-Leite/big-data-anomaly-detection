@@ -7,7 +7,7 @@ import pandas as pd
 
 from sklearn.pipeline import Pipeline
 
-from shape_mle.infrastructure.logging import logger
+from anomaly_mle.infrastructure.logging import logger
 
 def predict(data: pd.DataFrame, pipeline: Pipeline, model) -> np.ndarray:
     """

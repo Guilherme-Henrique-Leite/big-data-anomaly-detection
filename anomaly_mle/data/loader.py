@@ -9,9 +9,9 @@ from typing import (
 
 import pandas as pd
 
-from shape_mle.config import DATA_FILE_PATH
-from shape_mle.infrastructure.logging import logger
-from shape_mle.utils.get_session_spark import get_spark_session
+from anomaly_mle.config import DATA_FILE_PATH
+from anomaly_mle.infrastructure.logging import logger
+from anomaly_mle.utils.get_session_spark import get_spark_session
 
 
 def load_parquet_data(

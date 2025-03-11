@@ -5,7 +5,7 @@ Module for testing pipeline loading
 import unittest
 from unittest.mock import patch
 
-from shape_mle.ml.pipeline import load_pipeline
+from anomaly_mle.ml.pipeline import load_pipeline
 
 
 class TestPipeline(unittest.TestCase):

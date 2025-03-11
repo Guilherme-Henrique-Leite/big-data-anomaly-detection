@@ -5,7 +5,7 @@ Module to load models
 import pickle
 from typing import Any
 
-from shape_mle.infrastructure.logging import logger
+from anomaly_mle.infrastructure.logging import logger
 
 
 def load_model(model_path: str) -> Any:
