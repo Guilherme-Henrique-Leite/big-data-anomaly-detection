@@ -1,4 +1,4 @@
-# Shape MLE Challenge
+# Anomaly Detection Pipeline
 
 ### Overview
 This project focuses on developing a solution for anomaly detection in vibration data, designed for production environments handling large data volumes. The structure was built to be modular, scalable, and easy to maintain.
