@@ -7,8 +7,8 @@ from pathlib import Path
 
 from sklearn.pipeline import Pipeline
 
-from shape_mle.infrastructure.logging import logger
-from shape_mle.utils.transformer_map import TRANSFORMER_MAP
+from anomaly_mle.infrastructure.logging import logger
+from anomaly_mle.utils.transformer_map import TRANSFORMER_MAP
 
 def load_pipeline(file_path: str) -> Pipeline:
     """

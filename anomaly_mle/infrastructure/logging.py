@@ -5,7 +5,7 @@ Logging module for application.
 import logging
 import datetime
 
-from shape_mle.config import LOG_FILE_PATH
+from anomaly_mle.config import LOG_FILE_PATH
 
 
 def setup_logger() -> logging.Logger:

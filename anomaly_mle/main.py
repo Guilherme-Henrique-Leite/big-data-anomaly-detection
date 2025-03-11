@@ -5,21 +5,21 @@ Module to run the prediction pipeline
 import os
 import json
 
-from shape_mle.config import (
+from anomaly_mle.config import (
     PIPELINE_FILE_PATH, 
     DATA_FILE_PATH, 
     FEATURE_COLUMNS, 
     PROJECT_ROOT
 )
 
-from shape_mle.ml.model import load_model
-from shape_mle.ml.predictor import predict
-from shape_mle.ml.pipeline import load_pipeline
+from anomaly_mle.ml.model import load_model
+from anomaly_mle.ml.predictor import predict
+from anomaly_mle.ml.pipeline import load_pipeline
 
-from shape_mle.data.loader import load_parquet_data
-from shape_mle.utils.results import save_results
+from anomaly_mle.data.loader import load_parquet_data
+from anomaly_mle.utils.results import save_results
 
-from shape_mle.infrastructure.logging import logger, setup_logger
+from anomaly_mle.infrastructure.logging import logger, setup_logger
 
 def get_model_path():
     """

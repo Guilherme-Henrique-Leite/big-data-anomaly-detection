@@ -5,7 +5,7 @@ Module for testing model loading
 import unittest
 from unittest.mock import patch, MagicMock
 
-from shape_mle.ml.model import load_model
+from anomaly_mle.ml.model import load_model
 
 
 class TestModel(unittest.TestCase):

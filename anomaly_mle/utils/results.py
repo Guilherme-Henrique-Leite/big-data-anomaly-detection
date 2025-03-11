@@ -6,8 +6,8 @@ import os
 import pandas as pd
 from datetime import datetime
 
-from shape_mle.config import PROJECT_ROOT
-from shape_mle.infrastructure.logging import logger
+from anomaly_mle.config import PROJECT_ROOT
+from anomaly_mle.infrastructure.logging import logger
 
 def save_results(predictions, output_file=None):
     """

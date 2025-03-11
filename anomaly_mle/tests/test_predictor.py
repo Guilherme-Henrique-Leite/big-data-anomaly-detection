@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from unittest.mock import MagicMock
 
-from shape_mle.ml.predictor import predict
+from anomaly_mle.ml.predictor import predict
 
 
 class TestPredictor(unittest.TestCase):

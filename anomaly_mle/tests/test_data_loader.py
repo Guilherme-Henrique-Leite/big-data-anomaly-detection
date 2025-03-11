@@ -6,7 +6,7 @@ import unittest
 import pandas as pd
 from unittest.mock import patch
 
-from shape_mle.data.loader import load_parquet_data
+from anomaly_mle.data.loader import load_parquet_data
 
 
 class TestDataLoader(unittest.TestCase):
