@@ -1,15 +1,14 @@
 # Shape MLE Challenge
 
 ### Overview
-This project involves refactoring the original job_test_challenge.py script, transforming it into a modularized and robust solution for anomaly detection in vibration data. The implementation was designed for production environments with large data volumes.
+This project focuses on developing a solution for anomaly detection in vibration data, designed for production environments handling large data volumes. The structure was built to be modular, scalable, and easy to maintain.
 
-### Refactoring Strategy
-When analyzing the original code, I identified the following areas for improvement:
-- Monolithic code that was difficult to maintain
-- Lack of proper error handling
-- No support for processing large data volumes
-- Scattered configuration settings
-- Insufficient documentation
+### Approach
+The system was designed with a focus on organization, efficiency, and adaptability, ensuring:
+- Support for large data volumes with PySpark integration
+- Robust error handling and detailed logging for monitoring
+- Centralized configuration to simplify adjustments and avoid duplication
+- Clear documentation with comprehensive docstrings
 
 My approach was to divide the code into modules with well-defined responsibilities, following SOLID principles and software engineering best practices.
 
@@ -51,27 +50,27 @@ shape_mle
 │   └── test_predictor.py
 └── main.py                  
 ```
-### Key Changes
-- Modularization
-The code was divided into modules with specific responsibilities, facilitating maintenance and testing. Each module has a single responsibility, following the single responsibility principle.
+### Features
+- Modular Design
+Each component has a well-defined responsibility, making the system more maintainable and testable.
 
 - Big Data Support
-I implemented PySpark support for processing large data volumes. The data loader can switch between pure pandas and PySpark depending on data size.
+PySpark integration enables processing of large datasets, with the ability to switch between pandas and PySpark depending on data size.
 
-- Error Handling
-I added try/except blocks at critical points, with specific error messages and proper logging. This makes the code more robust and facilitates debugging in production.
+- Error Handling & Logging
+Structured error handling with detailed logs enhances reliability and simplifies debugging.
 
 - Centralized Configuration
-All configurations were moved to a central module (config.py), making adjustments easier and avoiding duplication.
+A dedicated configuration module (config.py) ensures easy adjustments without code duplication.
 
 - Logging
 I implemented a logging system to track execution and facilitate debugging. Logs include information about each step of the process.
 
-- Documentation
-I added detailed docstrings for all functions and classes, following the reStructuredText standard.
+- Comprehensive Documentation
+Detailed docstrings following the reStructuredText standard provide clear guidelines for usage and development.
 
 - Testing
-I added unit tests for the data loader, model, pipeline, and predictor.
+Includes unit tests covering the data loader, model, pipeline, and predictor components.
 
 ### Running the code
 
@@ -94,12 +93,14 @@ python -m shape_mle.main
 
 ### Testing
 
-- Prediction
-Tests for the prediction module, checking behavior with empty data and with sample data.
+- Prediction Tests
+Validates behavior with both empty and sample datasets.
+
 - Model Loading
-Tests to ensure that models are loaded correctly and have the expected interface.
-- Pipeline Loading
-Tests to verify the construction of pipelines from configuration files.
+ Ensures models are loaded correctly and match the expected interface.
+
+- Pipeline Testing
+  Verifies that pipelines are built correctly based on configuration files.
 
 ```
 python -m unittest discover -s shape_mle/tests
