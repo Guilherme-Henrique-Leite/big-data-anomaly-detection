@@ -29,7 +29,7 @@ My approach was to divide the code into modules with well-defined responsibiliti
 
 ### Code Structure
 ```
-shape_mle
+anomaly_mle
 ├── config.py                
 ├── data/                    
 │   └── loader.py          
@@ -88,7 +88,7 @@ poetry install
 ruff check .
 
 # Run the code
-python -m shape_mle.main
+python -m anomaly_mle.main
 ```
 
 ### Testing
@@ -103,7 +103,7 @@ Validates behavior with both empty and sample datasets.
   Verifies that pipelines are built correctly based on configuration files.
 
 ```
-python -m unittest discover -s shape_mle/tests
+python -m unittest discover -s anomaly_mle/tests
 ```
 
 ### Future Improvements
