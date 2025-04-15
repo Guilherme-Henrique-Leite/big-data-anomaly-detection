@@ -1,7 +1,6 @@
 [tool.poetry]
-name = "shape-mle-challenge"
+name = "big-data-anomaly-detection"
 version = "0.1.0"
-description = "Machine Learning Engineer Challenge for Shape"
 authors = ["Guilherme Albuquerque <guilherme.hlalbuquerque@gmail.com>"]
 package-mode = false
 
